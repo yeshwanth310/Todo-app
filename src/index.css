@@ -1,13 +1,109 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-color: #f6e8ea;
+  font-family: "Lato", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  height: auto;
+  width: 400px;
+  background-color: #ef626c;
+  box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2rem;
+}
+.inputwrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+input[type="text"] {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  padding: 3px;
+  color: white;
+  width: 200px;
+}
+
+input::placeholder {
+  color: white;
+}
+.displaywrap {
+  margin-left: 5rem;
+}
+.todo ul li .delete {
+  float: right;
+  padding: 4px 10px 4px 10px;
+}
+.todo ul li .completed {
+  float: right;
+  padding: 4px 10px 4px 10px;
+  margin-left: 10px;
+}
+.todo ul li {
+  list-style: numeric;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 5px;
+  margin-left: -50px;
+  color: white;
+}
+.add-btn {
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 20px;
+  background-color: #007bff;
+  box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.completed {
+  border: none;
+  background: transparent;
+  color: white;
+  background-color: #08d801;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.delete {
+  border: none;
+  background: transparent;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.crossText {
+  text-decoration-line: line-through;
+  text-decoration-color: red;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
 }
